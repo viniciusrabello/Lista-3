@@ -1,3 +1,10 @@
+###################################################################################
+#Impressora de Tabela ASCII
+#Vinícius Rabello Rodrigues
+#DRE:119056899
+#Curso: Matemática Aplicada
+###################################################################################
+
 print('Use a função "ImprimirTabela(ini,fim,tam)", para imprimir a tabela ASCII')
 
 def ImprimirTabela(ini = 32, fim = 127, tam = 25):
