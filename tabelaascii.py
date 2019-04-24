@@ -17,22 +17,22 @@ def ImprimirTabela(ini = 32, fim = 127, tam = 25):
     for i in range (ini, fim + 1):
 
         if c % (tam + 1) == 0:
-            print('+','-' * 17,'+','-' * 8,'+','-' * 9,'+','-' * 5,'+','-' * 3,'+')
-            print('|','     Binario     ','|','  Octa  ','|','   Hex   ','|',' Dec ','|','Chr','|')
-            print('+','-' * 17,'+','-' * 8,'+','-' * 9,'+','-' * 5,'+','-' * 3,'+')
+            print('+','-' * 17,'+','-' * 7,'+','-' * 6,'+','-' * 7,'+','-' * 3,'+')
+            print('|','     Binario     ','|','  Oct  ','|','  Hex ','|','  Dec  ','|','Chr','|')
+            print('+','-' * 17,'+','-' * 7,'+','-' * 6,'+','-' * 7,'+','-' * 3,'+')
             c += 1
 
         if 64 > i:
-            print('|     {}      |   {}   |   {}    |  {}   |  {}  |'.format(bin(i),hex(i),oct(i),(i),chr(i)))
+            print('|     {} {}     |   {}   |   {}   |   {}   |  {}  |'.format(bin(i)[2:].zfill(8)[:4],bin(i)[-4:],oct(i)[2:].zfill(3),hex(i)[2:],str(i).zfill(3),chr(range(32,128)[i%95])))
             c += 1
         if i >= 64 and 100 > i:
-            print('|     {}     |   {}   |   {}   |  {}   |  {}  |'.format(bin(i),hex(i),oct(i),(i),chr(i)))
+            print('|     {} {}     |   {}   |   {}   |   {}   |  {}  |'.format(bin(i)[2:].zfill(8)[:4],bin(i)[-4:],oct(i)[2:].zfill(3),hex(i)[2:],str(i).zfill(3),chr(range(32,128)[i%95])))
             c += 1
         if i >= 100 and 127 > i:
-            print('|     {}     |   {}   |   {}   |  {}  |  {}  |'.format(bin(i),hex(i),oct(i),(i),chr(i)))
+            print('|     {} {}     |   {}   |   {}   |   {}   |  {}  |'.format(bin(i)[2:].zfill(8)[:4],bin(i)[-4:],oct(i)[2:].zfill(3),hex(i)[2:],str(i).zfill(3),chr(range(32,128)[i%95])))
             c += 1
         if i == 127:
-            print('|     {}     |   {}   |   {}   |  {}  |  {}  |'.format(bin(i),hex(i),oct(i),(i),chr(i)))
+            print('|     {} {}     |   {}   |   {}   |   {}   |  {}  |'.format(bin(i)[2:].zfill(8)[:4],bin(i)[-4:],oct(i)[2:].zfill(3),hex(i)[2:],str(i).zfill(3),chr(range(32,128)[i%95])))
             c += 1
     
-    print('+','-' * 17,'+','-' * 8,'+','-' * 9,'+','-' * 5,'+','-' * 3,'+')
+    print('+','-' * 17,'+','-' * 7,'+','-' * 6,'+','-' * 7,'+','-' * 3,'+')
